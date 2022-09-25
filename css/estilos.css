@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%; /* el rem los transforma a 10 px*/
+}
+body{
+    background-color: #ffffff;
+}
+
+p{
+    font-size: 1.9rem;
+}
+figcaption{
+    font-size: 1.8rem;
+}
+
+h1{
+    color: deepskyblue;
+    font-family:'Roboto', arial;
+    font-size: 4rem;
+
+}
+
+h2{
+    font-size: 3.8rem;
+
+}
+h3{
+    font-size: 3.5rem;
+    font-weight: 700;
+
+}
+
+/* ============== MOBILE FIRST ================== */
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr ;
+	grid-template-rows: auto;
+        grid-template-areas: 
+        "nav"
+        "header"
+        "productos"
+        "footer";
+
+}
+
+/* Pagia de Productoss*/
+.contenedor_productos{
+    display: grid;
+    grid-template-columns: 1fr ;
+	grid-template-rows: auto;
+        grid-template-areas: 
+        "nav"
+        "header"
+        "productos"
+        "filtros"
+        "footer";
+}
+
+#mainNav{
+    grid-area: nav;
+}
+#header{
+    grid-area: header;
+}
+#productos{
+    grid-area: productos;
+}
+#footer{
+    grid-area: footer;
+}
+#filtros{
+    grid-area: filtros;
+}
+
+
+main section p{
+    color:rgb(138, 0, 0);
+}
+
+
+.primerNav {
+    background-color: #ffffff74;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    top: 0;
+    box-shadow: 0 0 15px 1px #e63946;
+}
+
+.primerNav img{
+    margin: 8px;
+    
+}
+
+
+.primerNav ul{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.primerNav ul li a{
+    color: rgb(0, 0, 0);
+    font-size: 1.8rem;
+    text-decoration: none;
+    list-style: none;
+    margin-right: 20px;
+}
+
+
+/*selector de grupo */
+h1,h2,h3{
+    color: rgb(0, 0, 0);
+    font-family:'Light 300', arial;
+}
+
+
+.productos_texto{
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* Inicio segundo Nav */
+.secondNav{
+    margin: 30px;
+    font-size: 1.5rem;
+    line-height: 1.7em;
+    display: flex;
+	flex-direction: column;
+    text-align: center;
+
+}
+    .secondNav form{
+        margin-bottom: 30px;
+
+    }
+    
+    .secondNav span{
+		margin: 10px 0;
+		display: block;
+		color: deeppink;
+	}
+
+    .secondNav ul li{
+        
+        list-style: none;
+    }
+    .secondNav a{
+		color: #5B5959;
+		text-decoration: none;
+	}
+    .secondNav a:hover{
+        font-weight: 700;
+    }
+
+.header_pro{
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+/* selectotres de clases- se usa para repetir*/
+
+.section_productos {
+    justify-content: space-around;
+    margin: 20px;
+    padding-top: 30px;
+}
+
+/*selector id - dni de un elemento, solo es para el*/
+
+.section_formulario div{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+section form label{
+    margin: 5px;
+    padding-bottom: 5px;
+}
+
+section figure img{
+    width: 70%;
+}
+
+
+.section_productos_productos{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 20px;
+
+}
+
+.section_productos{
+    justify-content: space-around;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+
+}
+
+.accesorios_figure{
+    width: 200px;
+	height: 300px;
+}
+
+
+.accesorios_figure img{
+    width: 100%;
+	height: 100%;
+    object-fit: cover;
+
+
+}
+.section_caja{
+    width: 100%;
+}
+.section_nosotros img{
+    width: 80%;
+}
+.section_nosotros{
+    display: flex;
+}
+
+
+
+.pie {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ======================= media queries INDEX ======================= */
+
+/* min-width: 768px definimos 2cols (30VW - 70VW) y 5 rows auto */
+@media (min-width: 1024px){
+	.contenedor{
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+		"nav nav nav "
+		"header header header"
+		"productos productos productos"
+		"footer footer footer";
+	}
+    #productos .section_productos{
+        display: flex;
+		flex-direction: row;
+        
+        
+    }
+
+    #productos .section_productos{
+        width: 90%;
+		align-items: center;
+    }
+
+    .primerNav {
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+
+    }
+    .contenedor_productos{
+        grid-template-columns: 20vw 80vw;
+		grid-template-areas:
+		"nav nav nav"
+		"header header header"
+		"filtros productos productos"
+		"footer footer footer";
+    }
+    .secondNav{
+        text-align: start;
+    }
+
+    
+
+}
+
