@@ -22,6 +22,7 @@ h1{
     color: deepskyblue;
     font-family:'Roboto', arial;
     font-size: 4rem;
+    font-weight: 700;
 
 }
 
@@ -31,7 +32,7 @@ h2{
 }
 h3{
     font-size: 3.5rem;
-    font-weight: 700;
+    font-weight: 500;
 
 }
 
@@ -57,8 +58,18 @@ h3{
         grid-template-areas: 
         "nav"
         "header"
-        "productos"
         "filtros"
+        "productos"
+        "footer";
+}
+.contenedor_nosotros{
+    display: grid;
+    grid-template-columns: 1fr ;
+	grid-template-rows: auto;
+        grid-template-areas: 
+        "nav"
+        "header"
+        "main"
         "footer";
 }
 
@@ -77,44 +88,42 @@ h3{
 #filtros{
     grid-area: filtros;
 }
-
+#main{
+    grid-area: main;
+}
 
 main section p{
-    color:rgb(138, 0, 0);
+    color:rgb(0, 0, 0);
 }
 
 
 .primerNav {
     background-color: #ffffff74;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 30px;
-    top: 0;
     box-shadow: 0 0 15px 1px #e63946;
-}
-
-.primerNav img{
-    margin: 8px;
     
+    font-size: 1.6em;
+}
+.primerNav button{
+    background-color: black;
+}
+
+.primerNav a{
+    color: black;
+}
+
+.primerNav a:hover{
+    color: black;
+    font-weight: 800;
 }
 
 
-.primerNav ul{
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
 
-.primerNav ul li a{
-    color: rgb(0, 0, 0);
-    font-size: 1.8rem;
-    text-decoration: none;
-    list-style: none;
-    margin-right: 20px;
-}
+
+
+
+
+
+
 
 
 /*selector de grupo */
@@ -168,29 +177,36 @@ h1,h2,h3{
     margin-top: 25px;
 }
 
-
-/* selectotres de clases- se usa para repetir*/
-
-.section_productos {
-    justify-content: space-around;
-    margin: 20px;
-    padding-top: 30px;
+.header_img{
+    width: 100%;
+}
+.header h1{
+    text-align: center;
 }
 
-/*selector id - dni de un elemento, solo es para el*/
-
 .section_formulario div{
+    
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 99%;
+    margin: 1px;
 }
 section form label{
     margin: 5px;
     padding-bottom: 5px;
 }
+section button{
+    margin: 5px;
+    width: 99%;
+    align-items: center;
+}
 
 section figure img{
     width: 70%;
+}
+
+.section_2{
+    text-align: center;
 }
 
 
@@ -227,11 +243,14 @@ section figure img{
     width: 100%;
 }
 .section_nosotros img{
-    width: 80%;
+    width: 100%;
+    text-align: center; 
 }
 .section_nosotros{
-    display: flex;
+    text-align: center;
 }
+
+
 
 
 
@@ -255,24 +274,15 @@ section figure img{
 		"productos productos productos"
 		"footer footer footer";
 	}
+     
     #productos .section_productos{
         display: flex;
-		flex-direction: row;
+        width: 100%;
         
         
     }
 
-    #productos .section_productos{
-        width: 90%;
-		align-items: center;
-    }
-
-    .primerNav {
-        justify-content: space-between;
-        display: flex;
-        flex-direction: row;
-
-    }
+    
     .contenedor_productos{
         grid-template-columns: 20vw 80vw;
 		grid-template-areas:
@@ -284,6 +294,36 @@ section figure img{
     .secondNav{
         text-align: start;
     }
+
+    .sectiones {
+        display: flex;
+        margin: 5px;
+        
+    }
+    .section_formulario{
+        width: 65%;
+        font-size: 1.6rem;
+    }
+    
+    .section_2{
+        width: 35%;
+    }
+    .section_nosotros img{
+        width: 70%;
+    }
+    .caja_nosotros{
+        display: flex;
+        align-items: center;
+        margin: 10px;
+    }
+    .caja_nosotros2 img{
+        width: 99%;
+        
+    }
+
+
+    
+
 
     
 
